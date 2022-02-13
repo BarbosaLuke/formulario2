@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/button.css">
+    <link rel="stylesheet" href="CSS/tabela.css">
     <title>Formulario CRUD</title>
 </head>
 <body>
@@ -15,20 +16,25 @@
 
     <main>
         <button  type="button" class="button Cadastrar mobile" >Cadastrar</button>
-        <table>
+        <table class="tabela">
             <thead>
-                <th>Nome</th>
-                <th>Nome</th>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Ação</th>
+                    
+                    
+                </tr>
                 
                 
             </thead>
             <tbody>
-                <tr>
-                    <td>Nome</td>
-                    <td>Nome</td>
+                <tr class="pintado">
+                    <td  class="id">2</td>
+                    <td class="nome">Pedro augusto </td>
                     
 
-                    <td>
+                    <td class="rowbutton">
                         <button class="button azul" type="button">
                             Show
                         </button>
@@ -39,7 +45,41 @@
                             Excluir
                         </button>
                     </td>
-                </tr>
+               </tr>
+               <tr>
+                <td  class="id">ID</td>
+                <td class="nome">Frederico silva </td>
+                
+
+                <td class="rowbutton">
+                    <button class="button azul" type="button">
+                        Show
+                    </button>
+                    <button class="button amarelo" type="button">
+                        Editar
+                    </button>
+                    <button class="button vermelho" type="button">
+                        Excluir
+                    </button>
+                </td>
+           </tr >
+           <tr class="pintado">
+                    <td  class="id">ID</td>
+                    <td class="nome">Pedro augusto </td>
+                    
+
+                    <td class="rowbutton">
+                        <button class="button azul" type="button">
+                            Show
+                        </button>
+                        <button class="button amarelo" type="button">
+                            Editar
+                        </button>
+                        <button class="button vermelho" type="button">
+                            Excluir
+                        </button>
+                    </td>
+               </tr>
             </tbody>
         </table>
    
@@ -95,6 +135,6 @@
     </div>
 </main>
 
-    
+    <footer>86</footer>
 </body>
 </html>

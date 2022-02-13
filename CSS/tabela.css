@@ -1,0 +1,76 @@
+.tabela{
+    width: 100%;
+    user-select: none;
+    text-align: left;
+    margin: 0 auto;
+    color: white;
+    border-collapse: collapse;
+}
+body{
+    overflow: hidden;
+}
+:root{
+    --amareloEdit: #fe9d0cde;
+    --vermelhoDelete: #f65a37cb;
+    --azulShow: #556cf7;
+    --cadastrar:#345981 ;
+    --thcolor:#2a92df;
+}
+.tabela th{
+    height: 50px;
+    width: 60px;
+    text-align: center;
+    background-color: var(--thcolor);
+    padding: 5px;
+    font-size: 1.2rem;
+}
+.tabela .nome{
+    width: 950px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.tabela .rowbutton{
+    width: 300px;
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.tabela .id{
+    text-align: center;
+}
+.pintado{
+    background-color: #3d3d3d;
+}
+
+@media (max-width:480px){
+    .tabela{
+        border-spacing: 5px;
+    }
+    .tabela thead{
+        display: none;
+    }
+
+    .tabela td:not(:first-child){
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+
+    }
+    .tabela td:first-child{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+
+    }
+    .tabela td{
+        margin: 10px 0;
+    }
+    .tabela .rowbutton{
+        margin-bottom: 15px;
+    }
+}
+@media (max-width:1115px){
+    .amarelo,.azul{
+       margin-bottom: 10px;
+    }
+}
