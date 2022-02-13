@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/button.css">
     <link rel="stylesheet" href="CSS/tabela.css">
+    <link rel="stylesheet" href="CSS/boxshow.css">
     <title>Formulario CRUD</title>
 </head>
 <body>
@@ -20,7 +21,7 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Nome</th>
+                    <th class="nome">Nome</th>
                     <th>Ação</th>
                     
                     
@@ -113,28 +114,23 @@
         <div class="box-show-content">
 
             <header class="box-show-header"><h2>Novo Formulario</h2>
+                <hr>
                 <span class="box-show-close" id="box-showClose">&#10006;</span>
             </header>
 
-            <form class="form">
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="Nome" required>
+            <form class="box-show-form">
+                <input class="box-field-show" type="text" placeholder="Nome" disabled>
+                <input class="box-field-show" type="text" placeholder="Nome" disabled>
+                <input  class="box-field-show" type="text" placeholder="Nome" disabled>
+                <input class="box-field-show" type="text" placeholder="Nome" disabled>
+                <input class="box-field-show" type="text" placeholder="Nome" disabled>
+                <input class="box-field-show" type="text" placeholder="Nome" disabled>
+                <input class="box-field-show" type="text" placeholder="Nome" disabled>
             </form>
-
-            <footer>
-                <button>Salvar</button>
-                <button>Cancelar</button>
-                
-            </footer>
         </div>
     </div>
 </main>
 
-    <footer>86</footer>
+    
 </body>
 </html>
