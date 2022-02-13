@@ -29,6 +29,7 @@ body{
     padding-left: 20px;
     padding-right: 20px;
 }
+
 .tabela .rowbutton{
     width: 300px;
     padding-left: 25px;
@@ -37,6 +38,10 @@ body{
 }
 .tabela .id{
     text-align: center;
+}
+.tabela .nome{
+    text-align: start;
+    
 }
 .pintado{
     background-color: #3d3d3d;
@@ -49,18 +54,18 @@ body{
     .tabela thead{
         display: none;
     }
-
+    
     .tabela td:not(:first-child){
         display: flex;
         justify-content: space-between;
         padding: 0 20px;
-
+        
     }
     .tabela td:first-child{
         display: flex;
         justify-content: space-between;
         margin-left: 10px;
-
+        
     }
     .tabela td{
         margin: 10px 0;
