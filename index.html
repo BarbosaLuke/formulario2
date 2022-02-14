@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/button.css">
     <link rel="stylesheet" href="CSS/tabela.css">
     <link rel="stylesheet" href="CSS/boxshow.css">
+    <link rel="stylesheet" href="CSS/boxedit.css">
     <title>Formulario CRUD</title>
 </head>
 <body>
@@ -81,30 +82,32 @@
                         </button>
                     </td>
                </tr>
+
             </tbody>
         </table>
    
 
-    <div class="box">
-        <div class="box-content">
+    <div class="box-edit">
+        <div class="box-edit-content">
 
-            <header class="box-header"><h2>Novo Formulario</h2>
-                <span class="box-close" id="boxClose">&#10006;</span>
+            <header class="box-edit-header"><h2>Novo Formulario</h2>
+                <span class="box-edit-close" id="box-editClose">&#10006;</span>
+            <hr>
+
             </header>
-
-            <form class="form">
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="Nome" required>
+            <form class="box-edit-form">
+                <input class="box-field-edit" type="text" placeholder="Nome" required>
+                <input class="box-field-edit" type="text" placeholder="Nome" required>
+                <input class="box-field-edit" type="text" placeholder="Nome" required>
+                <input class="box-field-edit" type="text" placeholder="Nome" required>
+                <input class="box-field-edit" type="text" placeholder="Nome" required>
+                <input class="box-field-edit" type="text" placeholder="Nome" required>
+                <input class="box-field-edit" type="text" placeholder="Nome" required>
             </form>
-
+           
             <footer>
-                <button>Salvar</button>
-                <button>Cancelar</button>
+              <hr class="hrbottom">
+                <button type="button" class="button salvar">Salvar alterações</button>
                 
             </footer>
         </div>
@@ -126,11 +129,11 @@
                 <input class="box-field-show" type="text" placeholder="Nome" disabled>
                 <input class="box-field-show" type="text" placeholder="Nome" disabled>
                 <input class="box-field-show" type="text" placeholder="Nome" disabled>
+                <input class="box-field-show" type="text" placeholder="Nome" disabled>
             </form>
         </div>
     </div>
 </main>
 
-    
 </body>
 </html>
