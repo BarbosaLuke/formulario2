@@ -2,7 +2,7 @@
     --amareloEdit: #fe9d0cde;
     --vermelhoDelete: #f65a37cb;
     --azulShow: #556cf7;
-    --cadastrar:#345981 ;
+    --cadastrar:#345981;
     --thcolor:#2a92df;
 }
 .button{
@@ -15,10 +15,7 @@
     background-color: black;
     transition: box-shadow .6 ease;
 }
-.Cadastrar{
-    background-color: var(--cadastrar);
-    margin-bottom: 15px;
-}
+
 .button.azul{
     background-color: var(--azulShow);
     color: white;
@@ -31,18 +28,36 @@
     transition: 0.4s;
     border-radius: 9px;
 }
-.button.vermelho{
+
+.button{
     background-color: var(--vermelhoDelete);
     color: white;
     transition: 0.4s;
     border-radius: 9px;
 }
+.button.salvar{
+    background-color: var(--cadastrar);
+    color: white;
+    transition: 0.4s;
+    border-radius: 9px;
+    top: 30px;
+    width: 148px;
+    right: 2.8%;
+    position: absolute;
+}
 .button:hover{
     box-shadow: inset 200px 0 0 #00000055;
     
 }
+
+.Cadastrar{
+    background-color: var(--cadastrar);
+    margin-bottom: 15px;
+    transition: none;
+}
+
 @media (max-width:480px){
-    .button.mobile{
+    .button.Cadastrar{
         color: transparent;
         font-size: 0;
         width: 50px;
