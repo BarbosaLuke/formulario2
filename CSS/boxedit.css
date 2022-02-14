@@ -1,0 +1,137 @@
+.box-edit{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000090;
+    opacity: 0;
+    z-index: -1;
+    transition:all 0.4s ease;
+
+}
+:root{
+    --box:#303030;
+}
+.box-edit.active{
+    opacity: 1;
+    z-index: 1;
+}
+.box-edit-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vw;
+    height: 55%;
+    margin: 15vh auto;
+    padding-bottom: 20px;
+    background-color: var(--box);
+}
+.box-edit-header{
+    align-content: left;
+    justify-content: left;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1rem;
+    color: white;
+    text-align: left;
+}
+
+.box-edit-close{
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+.box-edit-close:hover{
+    background-color: red;
+    color: white;
+}
+
+.box-edit-form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+.box-field-edit::placeholder{
+    color: black;
+    font-size: 1rem;
+}
+.box-field-edit{
+    width: calc(50% - 10px);
+    height: 40px;
+    outline-style: none;
+    border-style: none;
+    padding: 0 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.box-field-edit:focus{
+    border: 3px solid gray;
+}
+.hrbottom{
+    margin: 40px 0;
+    width: 100%;
+    position: absolute;
+    filter: brightness(50%);
+    top: -25px;
+}
+.box-edit-header h2{
+    left: 0;
+    position: absolute;
+    padding-left: 20px;
+}
+.box-edit footer{
+    position: relative;
+}
+input:disabled {
+    background: rgb(155, 155, 155);
+}
+@media (max-width:736px){
+    .box-edit{
+        top: 100%;
+        transition: all 1s ease;
+    }
+    .box-edit.active{
+        top: 0;
+    }
+    .box-edit-content{
+        margin:0;
+        width: 100%;
+        position: fixed;
+        height: 80%;
+    }
+    .box-field-edit{
+        width: 100%;
+    }
+}
+@media (max-width:480px){
+    .box-edit{
+        top: 100%;
+        transition: all 1s ease;
+    }
+    .box-edit.active{
+        top: 0;
+    }
+    .box-edit-content{
+        margin:0;
+        width: 100%;
+        position: fixed;
+        height: 80%;
+    }
+    .box-field-edit{
+        width: 100%;
+    }
+}
