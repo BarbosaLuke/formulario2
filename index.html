@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="CSS/tabela.css">
     <link rel="stylesheet" href="CSS/boxshow.css">
     <link rel="stylesheet" href="CSS/boxedit.css">
+    <link rel="stylesheet" href="CSS/boxcadastro.css">
+    <script src="main.js"></script>
     <title>Formulario CRUD</title>
 </head>
 <body>
@@ -17,18 +19,14 @@
   
 
     <main>
-        <button  type="button" class="button Cadastrar mobile" >Cadastrar</button>
+        <button onclick="openBoxCadastro()" id="cadastrar" type="button" class="button Cadastrar mobile">Cadastrar</button>
         <table class="tabela">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th class="nome">Nome</th>
                     <th>Ação</th>
-                    
-                    
                 </tr>
-                
-                
             </thead>
             <tbody>
                 <tr class="pintado">
@@ -37,13 +35,13 @@
                     
 
                     <td class="rowbutton">
-                        <button class="button azul" type="button">
+                        <button onclick="openBoxShow()" id="show" class="button azul" type="button">
                             Show
                         </button>
-                        <button class="button amarelo" type="button">
+                        <button onclick="openBoxEdit()" id="edit" class="button amarelo" type="button">
                             Editar
                         </button>
-                        <button class="button vermelho" type="button">
+                        <button onclick="" class="button vermelho" type="button">
                             Excluir
                         </button>
                     </td>
@@ -54,10 +52,10 @@
                 
 
                 <td class="rowbutton">
-                    <button class="button azul" type="button">
+                    <button onclick="openBoxShow()"  id="show" class="button azul" type="button">
                         Show
                     </button>
-                    <button class="button amarelo" type="button">
+                    <button onclick="openBoxEdit()"  id="edit" class="button amarelo" type="button">
                         Editar
                     </button>
                     <button class="button vermelho" type="button">
@@ -71,10 +69,10 @@
                     
 
                     <td class="rowbutton">
-                        <button class="button azul" type="button">
+                        <button onclick="openBoxShow()" class="button azul" type="button">
                             Show
                         </button>
-                        <button class="button amarelo" type="button">
+                        <button onclick="openBoxEdit()" class="button amarelo" type="button">
                             Editar
                         </button>
                         <button class="button vermelho" type="button">
@@ -85,13 +83,13 @@
 
             </tbody>
         </table>
-   
 
-    <div class="box-edit">
+
+    <div id="box-edit" class="box-edit">
         <div class="box-edit-content">
 
-            <header class="box-edit-header"><h2>Novo Formulario</h2>
-                <span class="box-edit-close" id="box-editClose">&#10006;</span>
+            <header class="box-edit-header"><h2>Editar Formulario</h2>
+                <span  onclick="closeBoxEdit()" type="button" class="box-edit-close" id="box-editClose"  id="boxClose">&#10006;</span>
             <hr>
 
             </header>
@@ -113,12 +111,12 @@
         </div>
     </div>
 
-    <div class="box-show">
+    <div id="box-show" class="box-show">
         <div class="box-show-content">
 
-            <header class="box-show-header"><h2>Novo Formulario</h2>
+            <header class="box-show-header"><h2>Formulario</h2>
                 <hr>
-                <span class="box-show-close" id="box-showClose">&#10006;</span>
+                <span  onclick="closeBoxShow()" class="box-show-close" id="box-showClose">&#10006;</span>
             </header>
 
             <form class="box-show-form">
@@ -133,7 +131,43 @@
             </form>
         </div>
     </div>
-</main>
 
+
+
+
+
+
+    
+
+    <div id="box-cadastro" class="box-cadastro">
+        <div class="box-cadastro-content">
+
+            <header class="box-cadastro-header"><h2>Novo Formulario</h2>
+                <span  onclick="closeBoxCadastro()" type="button" class="box-cadastro-close" id="box-cadastroClose"  id="boxClose">&#10006;</span>
+            <hr>
+
+            </header>
+            <form class="box-cadastro-form">
+                <input class="box-field-cadastro" type="text" placeholder="Nome" required>
+                <input class="box-field-cadastro" type="text" placeholder="Nome" required>
+                <input class="box-field-cadastro" type="text" placeholder="Nome" required>
+                <input class="box-field-cadastro" type="text" placeholder="Nome" required>
+                <input class="box-field-cadastro" type="text" placeholder="Nome" required>
+                <input class="box-field-cadastro" type="text" placeholder="Nome" required>
+                <input class="box-field-cadastro" type="text" placeholder="Nome" required>
+            </form>
+           
+            <footer>
+              <hr class="hrbottom">
+                <button type="button" class="button salvar">Salvar formulario</button>
+                
+            </footer>
+        </div>
+    </div>
+
+
+
+</main>
+   
 </body>
 </html>
