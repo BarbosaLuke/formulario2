@@ -1,12 +1,20 @@
 'use strict'
 
 
+const tempForm = {
+    id:"2005",
+    nome:"Talom"
+}
+
+const getLocalStorage = () => JSON.parse(localStorage.getItem('db_form')) ??[]
+const setLocalStorage = (dbForm) => localStorage.setItem("db_form",JSON.stringify(dbForm))
 
 
-
-
-
-
+const createForm =  (form) =>{
+    const dbForm = getLocalStorage()
+    dbForm.push(form)
+    setLocalStorage(dbForm)
+}
 
 
 
