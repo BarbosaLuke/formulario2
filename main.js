@@ -3,24 +3,36 @@
 
 const tempForm = {
     id:"2005",
-    nome:"Talom"
+    nome:"LeBlanc"
 }
 
+//Banco De dados
 const getLocalStorage = () => JSON.parse(localStorage.getItem('db_form')) ??[]
 const setLocalStorage = (dbForm) => localStorage.setItem("db_form",JSON.stringify(dbForm))
 
 
+//Delete
+const deleteForm = (index) =>{
+    const dbForm = readForm()
+    dbForm.splice(index,1)
+    setLocalStorage(dbForm)
+}
+
+//Update
+const UpdateForm = (index,form) =>{
+    const dbForm = readForm()
+    dbForm[index] = form
+    setLocalStorage(dbForm) 
+}
+//Read
+const readForm = () => getLocalStorage()
+
+//CREATE
 const createForm =  (form) =>{
     const dbForm = getLocalStorage()
     dbForm.push(form)
     setLocalStorage(dbForm)
 }
-
-
-
-
-
-
 
 
 
@@ -44,4 +56,3 @@ const openBoxCadastro = () => document.getElementById('box-cadastro')
     .classList.add('active')
 const closeBoxCadastro = () => document.getElementById('box-cadastro')
     .classList.remove('active')
-
