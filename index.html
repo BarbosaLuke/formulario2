@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="CSS/boxshow.css">
     <link rel="stylesheet" href="CSS/boxedit.css">
     <link rel="stylesheet" href="CSS/boxcadastro.css">
-    <script src="main.js"></script>
+    <script src="main.js"  defer></script>
     <title>Formulario CRUD</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
 
     <main>
         <button onclick="openBoxCadastro()" id="cadastrar" type="button" class="button  Cadastrar mobile">Cadastrar</button>
-        <table class="tabela">
+        <table id="tableForm" class="tabela">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -29,12 +29,11 @@
                 </tr>
             </thead>
             <tbody>
-                
+                <!--
+
                 <tr class="pintado">
                     <td  class="id">2</td>
                     <td class="nome">Pedro augusto </td>
-                    
-
                     <td class="rowbutton">
                         <button onclick="openBoxShow()" id="show" class="button azul" type="button">
                             Show
@@ -64,23 +63,10 @@
                     </button>
                 </td>
            </tr >
-           <tr class="pintado">
-                    <td  class="id">ID</td>
-                    <td class="nome">Pedro augusto </td>
-                    
 
-                    <td class="rowbutton">
-                        <button onclick="openBoxShow()" class="button azul" type="button">
-                            Show
-                        </button>
-                        <button onclick="openBoxEdit()" class="button amarelo" type="button">
-                            Editar
-                        </button>
-                        <button class="button vermelho" type="button">
-                            Excluir
-                        </button>
-                    </td>
-               </tr>
+           --->
+
+
 
             </tbody>
         </table>
@@ -121,7 +107,7 @@
             </header>
 
             <form class="box-show-form">
-                <input class="box-field-show" type="text" placeholder="Nome" disabled>
+                <input  class="box-field-show" type="text" placeholder="Nome" disabled>
                 <input class="box-field-show" type="text" placeholder="CPF" disabled>
                 <input  class="box-field-show" type="text" placeholder="Nome da mãe" disabled>
                 <input class="box-field-show" type="text" placeholder="Nome do pai" disabled>
@@ -141,19 +127,19 @@
             <hr>
 
             </header>
-            <form class="box-cadastro-form">
-                <input class="box-field-cadastro" type="text" placeholder="Nome" required>
-                <input class="box-field-cadastro" type="text" placeholder="CPF" required>
-                <input class="box-field-cadastro" type="text" placeholder="Nome da mãe" required>
-                <input class="box-field-cadastro" type="text" placeholder="Nome do pai" required>
-                <input class="box-field-cadastro" type="text" placeholder="Cor preferida" required>
-                <input class="box-field-cadastro" type="text" placeholder="Data de nascimento" required>
-                <input class="box-field-cadastro" type="text" placeholder="Email" required>
+            <form id="cadastro-form" class="box-cadastro-form">
+                <input id="nome" class="box-field-cadastro" type="text" placeholder="Nome" required>
+                <input id="CPF" class="box-field-cadastro" type="number" placeholder="CPF" required>
+                <input id="nomeDaMae" class="box-field-cadastro" type="text" placeholder="Nome da mãe" required>
+                <input id="nomeDoPai" class="box-field-cadastro" type="text" placeholder="Nome do pai" required>
+                <input id="corPreferida" class="box-field-cadastro" type="text" placeholder="Cor preferida" required>
+                <input id="dataNascimento" class="box-field-cadastro" type="date" placeholder="Data de nascimento" required>
+                <input id="email" class="box-field-cadastro" type="email" placeholder="Email" required>
             </form>
            
             <footer>
               <hr class="hrbottom">
-                <button type="button" class="button salvar">Salvar formulario</button>
+                <button onclick="saveForm()" type="button" class="button salvar">Salvar formulario</button>
                 
             </footer>
         </div>
