@@ -49,13 +49,10 @@
     box-shadow: inset 200px 0 0 #00000055;
     
 }
-
 .Cadastrar{
     background-color: var(--cadastrar);
     margin-bottom: 15px;
-    transition: none;
 }
-
 @media (max-width:480px){
     .button.Cadastrar{
         color: transparent;
@@ -64,7 +61,7 @@
         height: 50px;
         border-radius: 50%;
         position: fixed;
-        top: 90vh;
+        top: 85vh;
         left: 80vw;
     }
     .button.mobile::before{

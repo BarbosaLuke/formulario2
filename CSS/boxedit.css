@@ -14,9 +14,10 @@
     --box:#303030;
 }
 .box-edit.active{
-    opacity: 1;
-    z-index: 1;
+    opacity: 1; 
+    z-index: 1; 
 }
+
 .box-edit-content{
     display: flex;
     flex-direction: column;
@@ -119,17 +120,19 @@ input:disabled {
 }
 @media (max-width:480px){
     .box-edit{
-        top: 100%;
+        top: 0%;
         transition: all 1s ease;
     }
     .box-edit.active{
         top: 0;
+        width: 100%;
+        height: 100%;
     }
     .box-edit-content{
         margin:0;
-        width: 100%;
-        position: fixed;
-        height: 80%;
+        width: 90%;
+        height: 85.5%;
+        margin-left: 4.9%;
     }
     .box-field-edit{
         width: 100%;

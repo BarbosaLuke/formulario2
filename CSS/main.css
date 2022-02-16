@@ -52,7 +52,9 @@ main{
         position: fixed;
         width: 100%;
     }
-
+    html{
+        overflow: auto;
+    }
     main{
         
         padding: 0;

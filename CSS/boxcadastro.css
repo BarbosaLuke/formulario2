@@ -100,37 +100,25 @@
 input:disabled {
     background: rgb(155, 155, 155);
 }
-@media (max-width:736px){
-    .box-cadastro{
-        top: 100%;
-        transition: all 1s ease;
-    }
-    .box-cadastro.active{
-        top: 0;
-    }
-    .box-cadastro-content{
-        margin:0;
-        width: 100%;
-        position: fixed;
-        height: 80%;
-    }
-    .box-field-cadastro{
-        width: 100%;
-    }
-}
+
+
 @media (max-width:480px){
     .box-cadastro{
-        top: 100%;
+        top: 0%;
         transition: all 1s ease;
+       
     }
     .box-cadastro.active{
-        top: 0;
+        top: 0%;
+        width: 100%;
+        height: 100%;
     }
+    
     .box-cadastro-content{
         margin:0;
-        width: 100%;
-        position: fixed;
-        height: 80%;
+        width: 90%;
+        height: 85.5%;
+        margin-left: 4.9%;
     }
     .box-field-cadastro{
         width: 100%;
