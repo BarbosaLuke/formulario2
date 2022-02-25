@@ -7,7 +7,8 @@
     border-collapse: collapse;
 }
 body{
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 :root{
     --amareloEdit: #fe9d0cde;
@@ -15,6 +16,9 @@ body{
     --azulShow: #556cf7;
     --cadastrar:#345981 ;
     --thcolor:#2a92df;
+}
+.tabela tr{
+    height: 65px;
 }
 .tabela th{
     height: 50px;
@@ -79,3 +83,23 @@ body{
        margin-bottom: 10px;
     }
 }
+tr:nth-child(even) {
+    background:#3d3d3d;
+}
+
+::-webkit-scrollbar{
+    width: 14px;
+    
+    }
+    ::-webkit-scrollbar-thumb{
+    background: #5c5c5c;
+    border-radius: 0px;
+    }
+    ::-webkit-scrollbar-thumb:hover{
+    background: #8c8c8c;
+    }
+    ::-webkit-scrollbar-track{
+    background: rgb(30, 30, 30);
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px rgb(30,30,30);
+    }
