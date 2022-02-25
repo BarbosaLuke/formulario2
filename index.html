@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="CSS/button.css">
     <link rel="stylesheet" href="CSS/tabela.css">
     <link rel="stylesheet" href="CSS/boxshow.css">
-    <link rel="stylesheet" href="CSS/boxedit.css">
     <link rel="stylesheet" href="CSS/boxcadastro.css">
     <script src="main.js"  defer></script>
     <title>Formulario CRUD</title>
@@ -72,49 +71,31 @@
         </table>
 
 
-    <div id="box-edit" class="box-edit">
-        <div class="box-edit-content">
-
-            <header class="box-edit-header"><h2>Editar Formulario</h2>
-                <span  onclick="closeBoxEdit()" type="button" class="box-edit-close" id="box-editClose"  id="boxClose">&#10006;</span>
-            <hr>
-
-            </header>
-            <form class="box-edit-form">
-                <input class="box-field-edit" type="text" placeholder="Nome" required>
-                <input class="box-field-edit" type="text" placeholder="CPF" required>
-                <input class="box-field-edit" type="text" placeholder="Nome da mãe" required>
-                <input class="box-field-edit" type="text" placeholder="Nome do pai" required>
-                <input class="box-field-edit" type="text" placeholder="Cor preferida" required>
-                <input class="box-field-edit" type="text" placeholder="Data de nascimento" required>
-                <input class="box-field-edit" type="text" placeholder="Email" required>
-            </form>
-           
-            <footer>
-              <hr class="hrbottom">
-                <button type="button" class="button salvar">Salvar alterações</button>
-                
-            </footer>
-        </div>
-    </div>
-
     <div id="box-show" class="box-show">
         <div class="box-show-content">
 
             <header class="box-show-header"><h2>Formulario</h2>
                 <hr>
-                <span  onclick="closeBoxShow()" class="box-show-close" id="box-showClose">&#10006;</span>
+                <span  onclick="closeBoxShow(),clearFields()" class="box-show-close" id="box-showClose">&#10006;</span>
             </header>
 
             <form class="box-show-form">
-                <input  class="box-field-show" type="text" placeholder="Nome" disabled>
-                <input class="box-field-show" type="text" placeholder="CPF" disabled>
-                <input  class="box-field-show" type="text" placeholder="Nome da mãe" disabled>
-                <input class="box-field-show" type="text" placeholder="Nome do pai" disabled>
-                <input class="box-field-show" type="text" placeholder="Cor preferida" disabled>
-                <input class="box-field-show" type="text" placeholder="Data de nascimento" disabled>
-                <input class="box-field-show" type="text" placeholder="Email" disabled>
-                <input class="box-field-show" type="text" placeholder="Idade" disabled>
+                
+                <input id="nomeee" class="box-field-show" type="text" placeholder="Nome" disabled="disabled">
+
+                <input id="CPFFF" class="box-field-show" type="text" placeholder="CPF" disabled="disabled" >
+
+                <input id="nomeDaMaeee" class="box-field-show" type="text" placeholder="Nome da mãe" disabled="disabled">
+
+                <input id="nomeDoPaiii" class="box-field-show" type="text" placeholder="Nome do pai" disabled="disabled">
+
+                <input id="corPreferidaaa" class="box-field-show" type="text" placeholder="Cor preferida" disabled="disabled">
+
+                <input id="dataNascimentooo" class="box-field-show" type="text" placeholder="Data de nascimento" disabled="disabled">
+
+                <input id="emailll" class="box-field-show" type="text" placeholder="Email" disabled="disabled">
+
+                <input class="box-field-show" type="text" placeholder="Idade" disabled="disabled">
             </form>
         </div>
     </div>
@@ -128,7 +109,7 @@
 
             </header>
             <form id="cadastro-form" class="box-cadastro-form">
-                <input id="nome" class="box-field-cadastro" type="text" placeholder="Nome" required>
+                <input data-index="new" id="nome" required class="box-field-cadastro" type="text" placeholder="Nome" required>
                 <input id="CPF" class="box-field-cadastro" type="number" placeholder="CPF" required>
                 <input id="nomeDaMae" class="box-field-cadastro" type="text" placeholder="Nome da mãe" required>
                 <input id="nomeDoPai" class="box-field-cadastro" type="text" placeholder="Nome do pai" required>
@@ -139,7 +120,7 @@
            
             <footer>
               <hr class="hrbottom">
-                <button onclick="saveForm()" type="button" class="button salvar">Salvar formulario</button>
+                <button  id="salvarr" type="button" class="button salvar">Salvar formulario</button>
                 
             </footer>
         </div>
